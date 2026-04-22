@@ -6,36 +6,36 @@
     <title>軽バン.com 採用特設サイト｜運営：株式会社ワールドフォースインターナショナル</title>
     <style>
         :root { --primary: #005bac; --accent: #ff4757; --line: #06c755; --bg: #f0f4f8; }
-        body { font-family: "Helvetica Neue", Arial, "Hiragino Sans", "Meiryo", sans-serif; margin: 0; padding: 0; color: #333; background-color: var(--bg); line-height: 1.8; }
+        body { font-family: "Helvetica Neue", Arial, "Hiragino Sans", "Meiryo", sans-serif; margin: 0; padding: 0; color: #333; background-color: var(--bg); line-height: 1.6; }
         
-        /* ヒーローセクション：ブルーのインパクトと実写の融合 */
         .hero { 
             background: linear-gradient(rgba(0,91,172,0.85), rgba(0,58,112,0.9)), url('hero-car.jpg'); 
             background-size: cover; 
-            background-position: center 80%; /* 軽バンの車体が見える位置に調整 */
+            background-position: center 80%;
             color: white; 
-            padding: 80px 20px 100px; 
+            padding: 60px 15px 80px; 
             text-align: center;
             text-shadow: 0 2px 15px rgba(0,0,0,0.4);
         }
-        .hero .brand-logo { font-size: 1.1rem; font-weight: bold; margin-bottom: 10px; display: block; letter-spacing: 1px; }
-        .hero h1 { font-size: 2.3rem; margin: 0; line-height: 1.2; }
-        .hero p { font-size: 1rem; margin-top: 15px; opacity: 0.95; line-height: 1.6; }
+        .hero .brand-logo { font-size: 1rem; font-weight: bold; margin-bottom: 8px; display: block; letter-spacing: 1px; }
+        .hero h1 { font-size: 1.8rem; margin: 0; line-height: 1.3; } /* スマホ向けに縮小 */
+        .hero p { font-size: 0.95rem; margin-top: 15px; opacity: 0.95; line-height: 1.5; word-break: keep-all; }
 
-        .container { max-width: 600px; margin: -50px auto 60px; padding: 0 15px; position: relative; z-index: 10; }
+        .container { max-width: 600px; margin: -30px auto 60px; padding: 0 15px; position: relative; z-index: 10; }
         .card { background: white; border-radius: 16px; padding: 25px; margin-bottom: 25px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); overflow: hidden; }
         
-        h2 { color: var(--primary); font-size: 1.4rem; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+        h2 { color: var(--primary); font-size: 1.3rem; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
         
         .feature-img { width: 100%; height: auto; border-radius: 10px; margin-bottom: 15px; }
         .feature-item { margin-bottom: 35px; }
-        .feature-item h3 { font-size: 1.2rem; color: var(--primary); margin: 10px 0; }
-        .feature-item p { font-size: 0.95rem; color: #555; margin: 0; }
+        .feature-item h3 { font-size: 1.1rem; color: var(--primary); margin: 10px 0; }
+        .feature-item p { font-size: 0.9rem; color: #555; margin: 0; }
 
-        .warmth-box { background: #fff9f0; border: 1px solid #ffe8cc; padding: 20px; border-radius: 12px; font-size: 0.95rem; text-align: center; }
+        .warmth-box { background: #fff9f0; border: 1px solid #ffe8cc; padding: 20px; border-radius: 12px; font-size: 0.9rem; text-align: center; }
 
-        .line-cta { background: var(--line); color: white; text-decoration: none; display: flex; align-items: center; justify-content: center; padding: 20px; border-radius: 50px; font-weight: bold; font-size: 1.2rem; box-shadow: 0 4px 15px rgba(6,199,85,0.3); }
-        .line-img { width: 32px; margin-right: 12px; }
+        .line-cta { background: var(--line); color: white; text-decoration: none; display: flex; align-items: center; justify-content: center; padding: 15px 10px; border-radius: 50px; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(6,199,85,0.3); }
+        .line-img { width: 28px; margin-right: 8px; }
+        .line-text { white-space: nowrap; } /* ボタン内の文字を一行で維持 */
 
         footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #888; }
         .corp-link { color: #888; text-decoration: underline; }
@@ -85,7 +85,7 @@
             <p><strong>まずはAIと「会話」してみませんか？</strong></p>
             <a href="https://lin.ee/zukZD7t" class="line-cta">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE" class="line-img">
-                軽バン.com AI採用事務局
+                <span class="line-text">軽バン.com AI採用事務局</span>
             </a>
         </div>
 
