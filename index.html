@@ -7,31 +7,19 @@
     <style>
         :root { --primary: #005bac; --accent: #ff4757; --line: #06c755; --bg: #f0f4f8; }
         body { font-family: "Helvetica Neue", Arial, "Hiragino Sans", "Meiryo", sans-serif; margin: 0; padding: 0; color: #333; background-color: var(--bg); line-height: 1.8; }
-        
-        /* ヒーローセクション */
         .hero { background: linear-gradient(rgba(0,91,172,0.8), rgba(0,58,112,0.9)), url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80&w=1000'); background-size: cover; background-position: center; color: white; padding: 80px 20px; text-align: center; }
         .hero h1 { font-size: 2.2rem; margin: 0; line-height: 1.3; }
         .hero p { font-size: 1.1rem; margin-top: 15px; opacity: 0.9; }
-
         .container { max-width: 600px; margin: -40px auto 60px; padding: 0 15px; }
         .card { background: white; border-radius: 16px; padding: 25px; margin-bottom: 25px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
-        
         h2 { color: var(--primary); font-size: 1.4rem; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
         h3 { font-size: 1.1rem; color: #003a70; margin-bottom: 10px; display: flex; align-items: center; }
         h3::before { content: "●"; color: var(--accent); margin-right: 10px; }
-
-        /* 温度感セクション */
         .warmth-box { background: #fff9f0; border: 1px solid #ffe8cc; padding: 15px; border-radius: 12px; font-size: 0.95rem; }
-
-        /* 特徴リスト */
         .feature-item { margin-bottom: 25px; }
         .feature-item p { font-size: 0.9rem; margin-left: 20px; color: #555; }
-
-        /* LINEボタン */
-        .line-cta { background: var(--line); color: white; text-decoration: none; display: flex; align-items: center; justify-content: center; padding: 20px; border-radius: 50px; font-weight: bold; font-size: 1.2rem; box-shadow: 0 4px 15px rgba(6,199,85,0.3); transition: transform 0.2s; }
-        .line-cta:active { transform: scale(0.98); }
+        .line-cta { background: var(--line); color: white; text-decoration: none; display: flex; align-items: center; justify-content: center; padding: 20px; border-radius: 50px; font-weight: bold; font-size: 1.2rem; box-shadow: 0 4px 15px rgba(6,199,85,0.3); }
         .line-img { width: 32px; margin-right: 12px; }
-
         footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #888; }
     </style>
 </head>
@@ -39,43 +27,43 @@
 
     <section class="hero">
         <h1>ラストワンマイルに、希望を。</h1>
-        <p>運送会社が、本気でドライバーの未来を考えて作った環境があります。</p>
+        <p>「この会社で働いてみたい」その直感を、安心感に変える場所。</p>
     </section>
 
     <div class="container">
         <div class="card">
-            <h2>運送会社が作った、手作りの安心</h2>
+            <h2>「聞きにくい」をゼロに。</h2>
             <div class="warmth-box">
-                「システム屋さんが作ったITツール」ではなく、私たち運送会社が日々の苦労の中で作り上げた、現場のための仕組みです。
-                手袋をしたままでも使いやすく、24時間AIがサポートする。そんな「現場の体温」を大切にしています。
+                「実際どのくらい稼げるの？」「未経験でも本当に大丈夫？」<br>
+                応募する前に気になることはたくさんあるはずです。私たちは、そんなあなたの不安を置き去りにしません。まずはAIチャットで、納得がいくまで質問してみてください。
             </div>
         </div>
 
         <div class="card">
-            <h2>選ばれる3つの理由</h2>
+            <h2>ワールドフォースが選ばれる理由</h2>
             
             <div class="feature-item">
-                <h3>24時間、AIチャットが即答</h3>
-                <p>「こんなこと聞いてもいいのかな？」という不安も、AIなら匿名でいつでも解決。採用担当者に直接聞きにくいことも、まずはAIに聞いてみてください。</p>
+                <h3>24時間、AIがあなたの疑問に回答</h3>
+                <p>配送ドライバーという仕事に興味を持った方向けの、専用AI相談窓口を設置。24時間365日、あなたの些細な疑問にGeminiが即座にお答えします。匿名ですので、気軽にご相談ください。</p>
             </div>
 
             <div class="feature-item">
-                <h3>業界トップクラスの福利厚生</h3>
-                <p>ポスタルくらぶ連携により、レジャー優待から「就業不能時の見舞金」まで完備。ドライバー本人だけでなく、あなたのご家族も守ります。</p>
+                <h3>家族も守る充実の福利厚生</h3>
+                <p>ポスタルくらぶ Value Plus と提携。レジャー割引から就業不能時の見舞金まで、あなたとあなたの大切なご家族を支える制度を完備しています。</p>
             </div>
 
             <div class="feature-item">
-                <h3>面倒な確定申告もサポート</h3>
-                <p>Calq（カルク）による会計支援。領収書の山に悩まされることなく、あなたは「走ること」だけに集中できる環境を整えています。</p>
+                <h3>走りに集中できる会計サポート</h3>
+                <p>個人事業主の悩みである確定申告。Calq（カルク）による会計支援サービスを提供しているため、面倒な事務作業に追われることなく、プロのドライバーとして活躍できます。</p>
             </div>
         </div>
 
         <div class="card" style="text-align: center;">
-            <p><strong>まずはAIと話してみませんか？</strong></p>
-            <p style="font-size: 0.8rem; color: #777; margin-top: -10px;">応募ではなく、ただの相談・質問でも大歓迎です。</p>
+            <p><strong>まずはAIと「会話」してみませんか？</strong></p>
+            <p style="font-size: 0.8rem; color: #777; margin-top: -10px;">応募ではなく、ただの質問でも大歓迎です。</p>
             <a href="https://lin.ee/zukZD7t" class="line-cta">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE" class="line-img">
-                AI採用事務局を友だち追加
+                AI採用事務局に質問してみる
             </a>
         </div>
 
