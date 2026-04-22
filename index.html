@@ -8,25 +8,25 @@
         :root { --primary: #005bac; --accent: #ff4757; --line: #06c755; --bg: #f0f4f8; }
         body { font-family: "Helvetica Neue", Arial, "Hiragino Sans", "Meiryo", sans-serif; margin: 0; padding: 0; color: #333; background-color: var(--bg); line-height: 1.8; }
         
-        /* ヒーローセクション：実写画像を活用 */
+        /* ヒーローセクション：ブルーのインパクトと実写の融合 */
         .hero { 
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('hero-car.jpg'); 
+            background: linear-gradient(rgba(0,91,172,0.85), rgba(0,58,112,0.9)), url('hero-car.jpg'); 
             background-size: cover; 
-            background-position: center; 
+            background-position: center 80%; /* 軽バンの車体が見える位置に調整 */
             color: white; 
-            padding: 100px 20px; 
+            padding: 80px 20px 100px; 
             text-align: center;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            text-shadow: 0 2px 15px rgba(0,0,0,0.4);
         }
-        .hero .brand-logo { font-size: 1.2rem; font-weight: bold; margin-bottom: 10px; display: block; }
-        .hero h1 { font-size: 2.5rem; margin: 0; line-height: 1.2; }
+        .hero .brand-logo { font-size: 1.1rem; font-weight: bold; margin-bottom: 10px; display: block; letter-spacing: 1px; }
+        .hero h1 { font-size: 2.3rem; margin: 0; line-height: 1.2; }
+        .hero p { font-size: 1rem; margin-top: 15px; opacity: 0.95; line-height: 1.6; }
 
-        .container { max-width: 600px; margin: -40px auto 60px; padding: 0 15px; position: relative; z-index: 10; }
+        .container { max-width: 600px; margin: -50px auto 60px; padding: 0 15px; position: relative; z-index: 10; }
         .card { background: white; border-radius: 16px; padding: 25px; margin-bottom: 25px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); overflow: hidden; }
         
         h2 { color: var(--primary); font-size: 1.4rem; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
         
-        /* 特徴セクションの画像調整 */
         .feature-img { width: 100%; height: auto; border-radius: 10px; margin-bottom: 15px; }
         .feature-item { margin-bottom: 35px; }
         .feature-item h3 { font-size: 1.2rem; color: var(--primary); margin: 10px 0; }
@@ -46,6 +46,7 @@
     <section class="hero">
         <span class="brand-logo">軽バン.com</span>
         <h1>ラストワンマイルに、<br>希望を。</h1>
+        <p>あなたが走る一歩一歩が、誰かの笑顔に。<br>その情熱を、手厚いサポートで支えたい。</p>
     </section>
 
     <div class="container">
@@ -64,19 +65,19 @@
             <div class="feature-item">
                 <img src="feature-ai.jpg" alt="AI相談" class="feature-img">
                 <h3>24時間、AIがあなたの疑問に回答</h3>
-                <p>気になることは、専用AIが即座にお答えします。深夜・早朝問わず気軽にご相談ください。</p>
+                <p>配送ドライバーに興味を持った方向けの、専用AI相談窓口。匿名ですので、深夜・早朝問わず気軽にご相談ください。</p>
             </div>
 
             <div class="feature-item">
                 <img src="feature-welfare.jpg" alt="福利厚生" class="feature-img">
                 <h3>家族も守る充実の福利厚生</h3>
-                <p>ポスタルくらぶ連携。レジャー優待から入院・葬儀の見舞金制度まで、あなたとご家族を支えます。</p>
+                <p>ポスタルくらぶ Value Plus 連携。レジャー優待から入院・葬儀の見舞金制度まで、あなたとご家族の生活を支えます。</p>
             </div>
 
             <div class="feature-item">
                 <img src="feature-support.jpg" alt="会計支援" class="feature-img">
                 <h3>走りに集中できる会計サポート</h3>
-                <p>Calq（カルク）による確定申告サポートを提供。面倒な事務作業はプロに任せられます。</p>
+                <p>Calq（カルク）による確定申告サポートを提供。面倒な事務作業はプロに任せ、あなたはプロとしての仕事に集中できます。</p>
             </div>
         </div>
 
