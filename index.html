@@ -99,15 +99,25 @@
 
     <script>
         window.addEventListener('DOMContentLoaded', () => {
-            // 1. URLの末尾から「?ref=XXXX」を取得する
+            // URLから ?ref= を取得
             const urlParams = new URLSearchParams(window.location.search);
             const refCode = urlParams.get('ref');
             
-            // 2. 紹介コードが存在する場合、LINEボタンの飛び先を「紹介用LIFF URL」に書き換える
-            if (refCode) {
-                const lineButton = document.getElementById('line-button');
-                if (lineButton) {
-                    lineButton.href = `https://liff.line.me/2010681134-jdxkPIXw?ref=${refCode}`;
+            // ボタン要素を取得
+            const lineButton = document.getElementById('line-button');
+            
+            if (refCode && lineButton) {
+                // 1. リンクをLIFF（アンケート）のURLに書き換える
+                lineButton.href = `https://liff.line.me/2010681134-jdxkPIXw?ref=${refCode}`;
+                
+                // 2. 【Chatwork対策】アプリ内ブラウザの制限を突破しやすくするため、別タブで開かせる
+                lineButton.setAttribute('target', '_blank');
+                lineButton.setAttribute('rel', 'noopener noreferrer');
+                
+                // 3. 【超重要】書き換えが成功したか一目でわかるように文字を変える！
+                const lineText = lineButton.querySelector('.line-text');
+                if (lineText) {
+                    lineText.innerText = 'アンケート画面へ進む（コード適用済）';
                 }
             }
         });
