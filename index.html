@@ -99,22 +99,27 @@
 
     <script>
         window.addEventListener('DOMContentLoaded', () => {
-            // URLから ?ref= を取得
             const urlParams = new URLSearchParams(window.location.search);
             const refCode = urlParams.get('ref');
             
-            // ボタン要素を取得
             const lineButton = document.getElementById('line-button');
             
             if (refCode && lineButton) {
-                // 1. リンクをLIFF（アンケート）のURLに書き換える
-                lineButton.href = `https://liff.line.me/2010681134-jdxkPIXw?ref=${refCode}`;
+                // 飛び先URLを準備
+                const liffUrl = `https://liff.line.me/2010681134-jdxkPIXw?ref=${refCode}`;
                 
-                // 2. 【Chatwork対策】アプリ内ブラウザの制限を突破しやすくするため、別タブで開かせる
-                lineButton.setAttribute('target', '_blank');
-                lineButton.setAttribute('rel', 'noopener noreferrer');
+                // 別タブで開く設定を無効化（Chatworkのエラー対策）
+                lineButton.removeAttribute('target');
+                lineButton.removeAttribute('rel');
                 
-                // 3. 【超重要】書き換えが成功したか一目でわかるように文字を変える！
+                // <a>タグ本来のリンク機能を止め、JavaScriptの力で確実に直接ジャンプさせる
+                lineButton.href = "javascript:void(0);";
+                lineButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.location.href = liffUrl;
+                });
+                
+                // 書き換え成功のサイン
                 const lineText = lineButton.querySelector('.line-text');
                 if (lineText) {
                     lineText.innerText = 'アンケート画面へ進む（コード適用済）';
