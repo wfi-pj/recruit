@@ -83,7 +83,7 @@
 
         <div class="card" style="text-align: center;">
             <p><strong>まずはAIと「会話」してみませんか？</strong></p>
-            <a href="https://lin.ee/zukZD7t" class="line-cta">
+            <a href="https://lin.ee/zukZD7t" id="line-button" class="line-cta">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE" class="line-img">
                 <span class="line-text">軽バン.com AI採用事務局</span>
             </a>
@@ -97,5 +97,21 @@
         </footer>
     </div>
 
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            // 1. URLの末尾から「?ref=XXXX」を取得する
+            const urlParams = new URLSearchParams(window.location.search);
+            const refCode = urlParams.get('ref');
+            
+            // 2. 紹介コードが存在する場合、LINEボタンの飛び先を「紹介用LIFF URL」に書き換える
+            if (refCode) {
+                const lineButton = document.getElementById('line-button');
+                if (lineButton) {
+                    lineButton.href = `https://liff.line.me/2010681134-jdxkPIXw?ref=${refCode}`;
+                }
+            }
+        });
+    </script>
+    
 </body>
 </html>
