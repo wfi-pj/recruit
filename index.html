@@ -105,28 +105,20 @@
             const lineButton = document.getElementById('line-button');
             
             if (refCode && lineButton) {
-                // 飛び先URLを準備
-                const liffUrl = `https://liff.line.me/2010681134-jdxkPIXw?ref=${refCode}`;
+                // 1. 純粋なHTMLリンクとして、hrefにLIFF URLを直接セットする
+                lineButton.href = `https://liff.line.me/2010681134-jdxkPIXw?ref=${refCode}`;
                 
-                // 別タブで開く設定を無効化（Chatworkのエラー対策）
+                // 2. 不具合の原因になる設定をすべて綺麗に削除
                 lineButton.removeAttribute('target');
                 lineButton.removeAttribute('rel');
                 
-                // <a>タグ本来のリンク機能を止め、JavaScriptの力で確実に直接ジャンプさせる
-                lineButton.href = "javascript:void(0);";
-                lineButton.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    window.location.href = liffUrl;
-                });
-                
-                // 書き換え成功のサイン
+                // 3. 書き換え成功のサイン
                 const lineText = lineButton.querySelector('.line-text');
                 if (lineText) {
                     lineText.innerText = 'アンケート画面へ進む（コード適用済）';
                 }
             }
         });
-    </script>
     
 </body>
 </html>
